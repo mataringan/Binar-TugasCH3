@@ -100,6 +100,44 @@ console.log('-------')
 let kelilingPersegi = new Persegi('Persegi',10);
 kelilingPersegi.keliling();
 
+// Child Class from SegiEmpat
+class PersegiPanjang extends SegiEmpat(BangunDatar){
+    constructor(name, panjang, lebar){
+        super(name);
+        this.panjang = panjang;
+        this.lebar = lebar;
+    }
+
+    introduction(){
+        super.introduction(); //From Human Class
+        super.claim(); //From Segi Empat Class
+    }
+
+    luas(){
+        let resPersegiPanjang = this.panjang * this.lebar;
+        console.log(
+            `Panjang : ${this.panjang}\nLebar : ${this.lebar}\nLuas : ${resPersegiPanjang}`
+        )
+    }
+
+    keliling(){
+        let resPersegiPanjang = ( 2 * this.panjang) + (2 * this.lebar);
+        console.log(
+            `Panjang : ${this.panjang}\nLebar : ${this.lebar}\nkeliling : ${resPersegiPanjang}`
+        )
+    }
+}
+
+
+
+let luasPersegiPanjang = new PersegiPanjang('Persegi Panjang', 2, 4);
+console.log(" ");
+luasPersegiPanjang.introduction();
+luasPersegiPanjang.luas();
+console.log('-------')
+let kelilingPersegiPanjang = new PersegiPanjang('Persegi Panjang', 2, 4);
+kelilingPersegiPanjang.keliling();
+
 
 
 // Child Class from Bangun Datar
