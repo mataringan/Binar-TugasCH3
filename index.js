@@ -5,7 +5,7 @@ class BangunDatar {
         this.name  = name;
     }
 
-    intoduction(){
+    introduction(){
         console.log(
             "==== Bangun Datar", this.name, '===='
             )
@@ -48,7 +48,7 @@ class Segitiga extends BangunDatar{
 }
 
 let luasSegitiga = new Segitiga('Segitiga', 10, 14 );
-luasSegitiga.intoduction();
+luasSegitiga.introduction();
 luasSegitiga.luas();
 console.log('-------');
 let kelilingSegitiga = new Segitiga();
@@ -72,32 +72,32 @@ class Persegi extends SegiEmpat(BangunDatar){
         this.sisi = sisi;
     }
 
-    intoduction(){
-        super.intoduction(); //From Human Class
+    introduction(){
+        super.introduction(); //From Human Class
         super.claim(); //From Segi Empat Class
     }
 
     luas() {
-        let resSegiempat = this.sisi * this.sisi;
+        let resPersegi = this.sisi * this.sisi;
         console.log(
-            `Sisi : ${this.sisi}\nLuas = ${resSegiempat}`
+            `Sisi : ${this.sisi}\nLuas = ${resPersegi}`
         );
     }
 
     keliling() {
-        let resSegiempat = 4 * this.sisi;
+        let resPersegi = 4 * this.sisi;
         console.log(
-            `Sisi : ${this.sisi}\nKeliling = ${resSegiempat}`
+            `Sisi : ${this.sisi}\nKeliling = ${resPersegi}`
         );
     }
   }
 
-let luasPersegi = new Persegi('Segi Empat', 10);
+let luasPersegi = new Persegi('Persegi', 10);
 console.log(" ");
-luasPersegi.intoduction();
+luasPersegi.introduction();
 luasPersegi.luas();
 console.log('-------')
-let kelilingPersegi = new Persegi('SegiEmpat',10);
+let kelilingPersegi = new Persegi('Persegi',10);
 kelilingPersegi.keliling();
 
 
@@ -127,7 +127,7 @@ class Lingkaran extends BangunDatar{
 
 let luasLingkaran = new Lingkaran('Lingkaran', 14)
 console.log("")
-luasLingkaran.intoduction();
+luasLingkaran.introduction();
 luasLingkaran.luas();
 console.log('-------')
 let kelilingLingkaran = new Lingkaran('Lingkaran', 14)
