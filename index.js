@@ -149,7 +149,7 @@ class Jajargenjang extends SegiEmpat(BangunDatar){
     }
 
     intoduction(){
-        super.intoduction(); //From Human Class
+        super.introduction(); //From Human Class
         super.claim(); //From Segi Empat Class
     }
 
@@ -186,7 +186,7 @@ class LayangLayang extends SegiEmpat(BangunDatar){
     }
 
     intoduction(){
-        super.intoduction(); //From Human Class
+        super.introduction(); //From Human Class
         super.claim(); //From Segi Empat Class
     }
 
