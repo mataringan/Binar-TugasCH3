@@ -140,6 +140,81 @@ kelilingPersegiPanjang.keliling();
 
 
 
+// Child class from Segi Empat
+class Jajargenjang extends SegiEmpat(BangunDatar){
+    constructor(name, alas, tinggi){
+        super(name);
+        this.alas = alas;
+        this.tinggi = tinggi;
+    }
+
+    intoduction(){
+        super.intoduction(); //From Human Class
+        super.claim(); //From Segi Empat Class
+    }
+
+    luas(){
+        let resJajargenjang = this.alas * this.tinggi;
+        console.log(
+            `Alas : ${this.alas}\nTinggi : ${this.tinggi}\nLuas = ${resJajargenjang}`
+          );
+    }
+
+    keliling(sisiA, sisiB, sisiC, sisiD){
+        let resKeliling = sisiA + sisiB + sisiC + sisiD;
+        console.log(
+            `Sisi A : ${sisiA}\nSisi B : ${sisiB}\nSisi C : ${sisiC}\nSisi D : ${sisiD}\nKeliling = ${resKeliling}`
+        )
+    }
+
+}
+let luasJajargenjang = new Jajargenjang('Jajargenjang', 4, 8);
+console.log(" ");
+luasJajargenjang.intoduction();
+luasJajargenjang.luas();
+console.log('-------');
+let kelilingJajargenjang = new Jajargenjang();
+kelilingJajargenjang.keliling(2, 4, 6, 8);
+
+
+// Child class from Segi Empat
+class LayangLayang extends SegiEmpat(BangunDatar){
+    constructor(name, diagonal1, diagonal2){
+        super(name);
+        this.diagonal1 = diagonal1;
+        this.diagonal2 = diagonal2;
+    }
+
+    intoduction(){
+        super.intoduction(); //From Human Class
+        super.claim(); //From Segi Empat Class
+    }
+
+    luas(){
+        let resLayangLayang = 0.5 * this.diagonal1 * this.diagonal2;
+        console.log(
+            `Diagonal1 : ${this.diagonal1}\nDiagonal2 : ${this.diagonal2}\nLuas = ${resLayangLayang}`
+          );
+    }
+
+    keliling(sisiA, sisiB, sisiC, sisiD){
+        let resLayangLayang = sisiA + sisiB + sisiC + sisiD;
+        console.log(
+            `Sisi A : ${sisiA}\nSisi B : ${sisiB}\nSisi C : ${sisiC}\nSisi D : ${sisiD}\nKeliling = ${resLayangLayang}`
+        )
+    }
+}
+
+let luasLayangLayang = new LayangLayang('LayangLayang', 10, 2);
+console.log(" ");
+luasLayangLayang.intoduction();
+luasLayangLayang.luas();
+console.log('-------');
+let kelilingLayangLayang = new LayangLayang();
+kelilingLayangLayang.keliling(3, 1, 5, 7);
+
+
+
 // Child Class from Bangun Datar
 class Lingkaran extends BangunDatar{
     // private property
